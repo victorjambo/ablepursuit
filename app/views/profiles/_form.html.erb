@@ -1,0 +1,51 @@
+<%= form_for(profile, multipart: true) do |f| %>
+  <% if profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if !profile.avatar.url.include?("missing") %>
+    <%= image_tag profile.avatar.url %>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar, :as => :file, :hint => image_tag(f.object.avatar.url) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tag_list, "Tags (Separate with comma)" %>
+    <%= f.text_field :tag_list %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= f.label :preview %>
+    <%= f.text_field :preview %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

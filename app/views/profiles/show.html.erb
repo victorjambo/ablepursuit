@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= image_tag @profile.avatar.url(:medium) %>
+</p>
+<p>
+  <strong>Tags:</strong>
+  <%= raw @profile.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+<p>
+  <strong>Title:</strong>
+  <%= @profile.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @profile.url %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @profile.content %>
+</p>
+
+<p>
+  <strong>Preview:</strong>
+  <%= @profile.preview %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
