@@ -69,7 +69,12 @@ a.navbar-brand {
   justify-content: center;
   margin-top: -90px;
   position: relative;
-  
+
+  /* Parallax */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .input-group {
