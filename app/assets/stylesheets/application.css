@@ -10,6 +10,249 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap
  *= require_tree .
  *= require_self
  */
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/*navigation bar*/
+.navbar.navbar-default {
+  background: transparent;
+  height: 70px;
+  width: 100%;
+  z-index: 99999999; /*so nothing can show infront */
+  border: none;
+}
+
+div.navbar-header > a.navbar-brand {
+  color: rgba(2, 2, 2, 0.78);
+}
+
+ul.nav.navbar-nav.navbar-right > li > a {
+  color: rgba(2, 2, 2, 0.78);
+}
+
+.nav.navbar-nav.navbar-rights{
+  padding: 25px 20px 0 0;
+}
+
+a.navbar-brand {
+  font-size: 23px;
+}
+
+.navbar-nav > li > a {
+  font-size: 19px;
+}
+
+/* search bar */
+#hero {
+  background: url('https://media.glassdoor.com/home/hero.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  width: 100%;
+  height: 500px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -90px;
+  position: relative;
+  
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    z-index: 10 !important;
+}
+
+#hero > h1 {
+  color: white;
+  margin-top: -30px;
+}
+
+.input-group-btn > .btn.btn-default {
+  background-image: url('https://static.glassdoor.com/static/img/home/icon-search-white.svg?v=45f04c1x6');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #0CAA41;
+  border-color: transparent;
+  height: 55px;
+  width: 60px;
+}
+
+.input-group-btn > .btn.btn-default:hover {
+  background-color: #007549;
+}
+
+input.form-control {
+  border-color: transparent;
+  height: 55px;
+}
+
+#companyInput {
+	width: 780px !important;
+  max-width: 790px !important;
+}
+
+/* container */
+.container > h2 {
+  padding: 20px 0;
+}
+
+.container > .row {
+  padding-bottom: 140px;
+}
+
+.container > .row > .col-md-4 {
+  padding-bottom: 30px;
+}
+
+.my-box {
+  height: 445px;
+  width: 100%;
+  border: 2px;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.cell-body {
+  padding: 20px;
+}
+
+.cell-body > h4 {
+  font-size: 18px;
+  line-height: 1.33;
+  color: #0d0d0d;
+  font-weight: bold;
+  margin: 0;
+  height: 72px;
+  display: block;
+}
+
+.cell-body > p {
+  height: 72px;
+  margin-top: 10px;
+}
+
+.btn.btn-default {
+  background-color: #0CAA41;
+  width: 100%;
+  display: inline-block;
+  border-radius: 2px;
+  line-height: 1.33;
+  padding: 13px 0;
+  overflow: hidden;
+}
+
+.btn:hover, .input-group-btn > button {
+  background-color: #007549;
+  transition: translateZ(0);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+a.btn.btn-default > span {
+  color: white;
+  font-size: 18px;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* fa icons*/
+#pics > #cliff, #water {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  color: #fff;
+  font-size: 14px;
+}
+
+#pics > #cliff {
+  background: url('https://media.glassdoor.com/home/feature-link/com/KYW_Blog-750x370.jpg');
+  background-size: cover;
+  height: 350px;
+}
+
+#pics > #water {
+  background: url('https://media.glassdoor.com/home/feature-link/com/1_BainCompany-750x370.jpg');
+  background-size: cover;
+  height: 350px;
+}
+
+#pics .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#footer {
+  background: black;
+  padding: 20px;
+  line-height: 24px;
+  color: #7f7f7f;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+#footer > hr {
+  width: 100%;
+  height: 0;
+  border-top: 1px solid #7f7f7f;
+}
+
+#footer > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+ul.footer-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.footer-menu > li {
+    float: left;
+}
+
+ul.footer-menu > li > p {
+  text-align: center;
+}
+
+ul.footer-menu > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.ellipsify {
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+}

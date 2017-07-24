@@ -12,6 +12,12 @@ gem 'paperclip', '~> 5.1'
 gem 'rails_admin', '~> 1.2'
 gem 'acts-as-taggable-on', '~> 5.0'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-jquery'
+  gem 'rails-assets-tether'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.4'
 # Use sqlite3 as the database for Active Record

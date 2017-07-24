@@ -1,31 +1,116 @@
 <p id="notice"><%= notice %></p>
 
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <!-- Blog Post Content Column -->
+    <div class="col-lg-8">
+      <!-- Title -->
+      <h1><%= @profile.title %></h1>
+
+      <!-- Tags -->
+      <p class="lead">
+        <%= raw @profile.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+      </p>
+
+      <hr>
+
+      <!-- Date/Time -->
+      <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2016 at 9:00 PM</p>
+
+      <hr>
+
+      <!-- Preview Image -->
+      <img class="img-responsive" src="https://media.glassdoor.com/home/feature-link/com/KYW_Blog-750x370.jpg" style="width: 900px; height: 300px;" alt="">
+
+      <hr>
+
+      <!-- Post Content -->
+      <p class="lead"><%= @profile.preview %></p>
+      <p><%= @profile.content %></p>
+
+      <hr>
+    </div>
+
+    <!-- Blog Sidebar Widgets Column -->
+    <div class="col-md-4">
+      <!-- Blog Search Well -->
+      <div class="well">
+          <h4>Search</h4>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Company name">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"></button>
+            </span>
+          </div>
+          <!-- /.input-group -->
+      </div>
+
+      <!-- Blog Categories Well -->
+      <div class="well">
+        <h4>Similar organizations</h4>
+        <div class="row">
+          <div class="col-lg-6">
+            <ul class="list-unstyled">
+              <li><a href="#">organization #1</a></li>
+              <li><a href="#">organization #2</a></li>
+              <li><a href="#">organization #3</a></li>
+              <li><a href="#">organization #4</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+              <ul class="list-unstyled">
+                <li><a href="#">organization #5</a></li>
+                <li><a href="#">organization #6</a></li>
+                <li><a href="#">organization #7</a></li>
+                <li><a href="#">organization #8</a></li>
+              </ul>
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+
+        <!-- Side Widget Well -->
+        <div class="well">
+            <h4>More info...</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+        </div>
+
+    </div>
+
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container 
+
+
 <p>
   <strong>Avatar:</strong>
-  <%= image_tag @profile.avatar.url(:medium) %>
+  <%#= image_tag @profile.avatar.url(:medium) %>
 </p>
 <p>
   <strong>Tags:</strong>
-  <%= raw @profile.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+  <%#= raw @profile.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 <p>
   <strong>Title:</strong>
-  <%= @profile.title %>
+  <%#= @profile.title %>
 </p>
 
 <p>
   <strong>Url:</strong>
-  <%= @profile.url %>
+  <%#= @profile.url %>
 </p>
 
 <p>
   <strong>Content:</strong>
-  <%= @profile.content %>
+  <%#= @profile.content %>
 </p>
 
 <p>
   <strong>Preview:</strong>
-  <%= @profile.preview %>
+  <%#= @profile.preview %>
 </p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%#= link_to 'Edit', edit_profile_path(@profile) %> |
+<%#= link_to 'Back', profiles_path %>
+-->

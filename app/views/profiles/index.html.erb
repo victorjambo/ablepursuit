@@ -1,35 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Profiles</h1>
+<!-- Hero -->
+<div id="hero">
+  <h1 class="text-center">Business to customer | personality to public</h1>
+  <form class="form-inline">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Company name" id="companyInput">
+      
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"></button>
+      </span>
+    </div>
+  </form>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Avatar</th>
-      <th>Title</th>
-      <th>Tags</th>
-      <th>count</th>
-      <th>Preview</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<!-- container -->
+<div class="container" id="my-container">
+  <h2>Organizations we have provided services to</h2>  
+  <div class="row">
     <% @profiles.each do |profile| %>
-      <tr>
-        <td><%= image_tag profile.avatar.url(:thumb) %></td>
-        <td><%= link_to profile.title, profile.url, target: 'blank' %></td>
-        <td><%= raw profile.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
-        <td><%= profile.impressionist_count %></td>
-        <td><%= profile.preview %></td>
-        <td><%= link_to 'Show', profile %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="col-md-4">
+        <div class="my-box">
+          <a href="#">
+            <img class="img-responsive" src="https://media.glassdoor.com/home/feature-link/com/KYW_Blog-750x370.jpg" style="opacity: 1;">
+          </a>
+          <div class="cell-body">
+            <h4><%= profile.title %></h4>
+            <p><%= profile.preview %></p>
+            <%= link_to profile, class: 'btn btn-default' do %>
+              <span>Read more</span>
+            <% end %>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
+        <%#= image_tag profile.avatar.url(:thumb) %>
+        <%#= link_to profile.title, profile.url, target: 'blank' %>
+        <%#= raw profile.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+        <%#= profile.impressionist_count %>
+        <%#= profile.preview %>
+        <%#= link_to 'Show', profile %>
+        <%#= link_to 'Edit', edit_profile_path(profile) %>
+        <%#= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %>
 
-<br>
-
-<%= link_to 'New Profile', new_profile_path %>
+<%#= link_to 'New Profile', new_profile_path %>
