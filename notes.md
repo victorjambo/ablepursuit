@@ -16,6 +16,11 @@
 * custom rails admin
 * only require login at /admin
 * handle missing avatars
+* load more...
+
+## bugs
+* search only works when hit enter. button not working
+* customize text below search
 
 
 ```

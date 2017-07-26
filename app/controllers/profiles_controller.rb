@@ -8,7 +8,7 @@ class ProfilesController < ApplicationController
     if params[:tag]
       @profiles = Profile.tagged_with(params[:tag])
     else
-      @profiles = Profile.all
+      @profiles = Profile.Search(params[:search])
     end
   end
 

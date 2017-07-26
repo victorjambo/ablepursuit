@@ -1,18 +1,38 @@
-<p id="notice"><%= notice %></p>
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below.background: url('https://media.glassdoor.com/home/hero.jpg'); -->
+<header class="intro-header" style="background-image: url('https://media.glassdoor.com/home/hero.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h1>AblePursuit</h1>
 
-<!-- Hero -->
-<div id="hero">
-  <h1 class="text-center">Business to customer | personality to public</h1>
-  <form class="form-inline">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Company name" id="companyInput">
-      
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button"></button>
-      </span>
+            <!--form class="form-inline">
+              <div class="input-group">
+                <input type="text" class="form-control" size="60" placeholder="Company name">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button"></button>
+                </span>
+              </div>
+            </form-->
+
+            
+            <%= form_tag profiles_path, :method => 'get', class: 'form-inline' do %>
+              <div class="input-group">
+                <%= search_field_tag :search, params[:search], type: "text", class: "form-control", size: "60", placeholder: "Company name" %>
+                <span class="input-group-btn">
+                  <%= submit_tag "", name: nil, class: "btn btn-default", type: "button" %>
+                </span>
+              </div>
+            <% end %>
+
+
+          <span class="subheading">Search for client</span>
+        </div>
+      </div>
     </div>
-  </form>
-</div>
+  </div>
+</header>
 
 <!-- container -->
 <div class="container" id="my-container">
@@ -22,7 +42,8 @@
       <div class="col-md-4">
         <div class="my-box">
           <a href="#">
-            <img class="img-responsive" src="https://media.glassdoor.com/home/feature-link/com/KYW_Blog-750x370.jpg" style="opacity: 1;">
+            <!--img class="img-responsive" src="https://media.glassdoor.com/home/feature-link/com/KYW_Blog-750x370.jpg" style="opacity: 1;"-->
+            <%= image_tag profile.avatar.url, class: "img-responsive" %>
           </a>
           <div class="cell-body">
             <h4><%= profile.title %></h4>
