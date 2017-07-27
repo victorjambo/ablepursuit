@@ -1,5 +1,9 @@
 RailsAdmin.config do |config|
 
+  config.authorize_with do
+    redirect_to main_app.new_user_session_path unless user_signed_in?
+  end
+
   ### Popular gems integration
 
   ## authorization

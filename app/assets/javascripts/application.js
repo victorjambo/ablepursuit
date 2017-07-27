@@ -46,4 +46,16 @@ jQuery(document).ready(function($) {
       this.previousTop = currentTop;
     });
   }
+
+  // change css
+  var urlRegex = /(\/profiles\/\d+|users)/; //regex
+  var match = window.location.pathname.match(urlRegex); //returns true or false
+  if (match) { 
+    $('.navbar-custom .nav li a, .navbar-custom .navbar-brand').css({
+      color: "#000"
+    });
+  }
+
 });
+
+

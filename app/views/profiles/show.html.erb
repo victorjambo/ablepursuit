@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <!-- Page Content -->
-<div class="container">
+<div class="container" style="padding-top: 70px;">
   <div class="row">
     <!-- Blog Post Content Column -->
     <div class="col-lg-8">
@@ -16,12 +16,11 @@
       <hr>
 
       <!-- Date/Time -->
-      <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2016 at 9:00 PM</p>
+      <p><span class="glyphicon glyphicon-time"></span> Posted on <%= @profile.created_at.strftime("%b %d, %Y") %></p>
 
       <hr>
 
-      <!-- Preview Image -->
-      <img class="img-responsive" src="https://media.glassdoor.com/home/feature-link/com/KYW_Blog-750x370.jpg" style="width: 900px; height: 300px;" alt="">
+      <%= image_tag @profile.avatar.url, class: "img-responsive show-image", alt: "profile image" %>
 
       <hr>
 
@@ -34,16 +33,29 @@
 
     <!-- Blog Sidebar Widgets Column -->
     <div class="col-md-4">
+      
       <!-- Blog Search Well -->
       <div class="well">
-          <h4>Search</h4>
+        <h4>Search</h4>
+        <%= form_tag profiles_path, :method => 'get', class: 'form-inline' do %>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Company name">
+            <%= search_field_tag :search, params[:search], type: "text", class: "form-control", size: "100%", placeholder: "Company name" %>
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button"></button>
+              <%= submit_tag "", class: "btn btn-default", type: "button" %>
             </span>
           </div>
-          <!-- /.input-group -->
+        <% end %>
+      </div>
+
+      <!-- Blog Categories Well -->
+      <div class="well">
+        <h4>References</h4>
+        <ul class="list-unstyled">
+          <li>Website: <%= link_to @profile.url %></li>
+          <li>Facebook: /company</li>
+          <li>twitter: @company</li>    
+          <li>Location: Nairobi, Kenya</li> 
+        </ul>
       </div>
 
       <!-- Blog Categories Well -->
@@ -52,29 +64,21 @@
         <div class="row">
           <div class="col-lg-6">
             <ul class="list-unstyled">
-              <li><a href="#">organization #1</a></li>
-              <li><a href="#">organization #2</a></li>
-              <li><a href="#">organization #3</a></li>
-              <li><a href="#">organization #4</a></li>
+              <% @profiles[0..3].each do |p|%>
+                <li><%= link_to p.title %></li>
+              <% end %>
             </ul>
           </div>
           <div class="col-lg-6">
               <ul class="list-unstyled">
-                <li><a href="#">organization #5</a></li>
-                <li><a href="#">organization #6</a></li>
-                <li><a href="#">organization #7</a></li>
-                <li><a href="#">organization #8</a></li>
-              </ul>
+              <% @profiles[-4..-1].each do |p|%>
+                <li><%= link_to p.title %></li>
+              <% end %>
+            </ul>
           </div>
         </div>
         <!-- /.row -->
       </div>
-
-        <!-- Side Widget Well -->
-        <div class="well">
-            <h4>More info...</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-        </div>
 
     </div>
 

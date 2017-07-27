@@ -16,6 +16,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1.json
   def show
     impressionist(@profile)
+    @profiles = Profile.all
   end
 
   # GET /profiles/new

@@ -19,4 +19,5 @@ class Profile < ApplicationRecord
   		all.order("created_at DESC")
   	end
   end
+  
 end

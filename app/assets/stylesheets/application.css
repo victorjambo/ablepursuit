@@ -86,6 +86,15 @@ input.form-control {
   margin-top: 10px;
 }
 
+@media only screen and (min-width: 991px) {
+  .cell-body > h4 {
+    height: auto;
+  }
+  .cell-body > p {
+    height: auto;
+  }
+}
+
 .btn.btn-default {
   background-color: #0CAA41;
   width: 100%;
@@ -511,4 +520,11 @@ a.btn.btn-default > span {
 		margin-left: 0;
 	}
 
+}
+
+
+/** image in show page **/
+.show-image {
+  width: 900px;
+  height: 300px;
 }
