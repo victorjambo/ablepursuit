@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'tags/:tag', to: 'profiles#index', as: :tag
 
-  devise_for :users
+  devise_for :users, skip: :registration
 
   resources :profiles
 
