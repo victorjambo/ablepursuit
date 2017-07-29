@@ -14,10 +14,10 @@ class Profile < ApplicationRecord
 	#search
 	def self.Search(search)
 		if search && search != ''
-  		where(["title LIKE ?", "%#{search}%"])
-  	else
-  		all.order("created_at DESC")
-  	end
+			where(["title LIKE ?", "%#{search}%"])
+		else
+			all.order("created_at DESC")
+		end
   end
   
 end

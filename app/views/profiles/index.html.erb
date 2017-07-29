@@ -9,14 +9,14 @@
             
             <%= form_tag profiles_path, :method => 'get', class: 'form-inline' do %>
               <div class="input-group">
-                <%= search_field_tag :search, params[:search], type: "text", class: "form-control", size: "60", placeholder: "Company name" %>
+                <%= search_field_tag :search, params[:search], type: "text", class: "form-control", size: "60", placeholder: "Business name" %>
                 <span class="input-group-btn">
-                  <%= submit_tag "", name: nil, class: "btn btn-default", type: "button" %>
+                  <%= submit_tag "", name: nil, class: "btn btn-default" %>
                 </span>
               </div>
             <% end %>
 
-          <span class="subheading">Search for client</span>
+          <span class="subheading">Search</span>
         </div>
       </div>
     </div>

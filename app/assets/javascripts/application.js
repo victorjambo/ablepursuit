@@ -48,7 +48,7 @@ jQuery(document).ready(function($) {
   }
 
   // change css
-  var urlRegex = /(\/profiles\/\d+|users)/; //regex
+  var urlRegex = /(profiles|users)/; //regex
   var match = window.location.pathname.match(urlRegex); //returns true or false
   if (match) { 
     $('.navbar-custom .nav li a, .navbar-custom .navbar-brand').css({
@@ -59,3 +59,12 @@ jQuery(document).ready(function($) {
 });
 
 
+$(document).ready(function () {
+  $(document).click(function (event) {
+    var clickover = $(event.target);
+    var _opened = $(".navbar-collapse").hasClass("collapse in");
+    if (_opened === true && !clickover.hasClass("navbar-toggle")) {
+      $("button.navbar-toggle").click();
+    }
+  });
+});

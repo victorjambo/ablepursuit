@@ -85,7 +85,9 @@ input.form-control {
   height: 72px;
   margin-top: 10px;
 }
+/*
 
+Messing things up
 @media only screen and (min-width: 991px) {
   .cell-body > h4 {
     height: auto;
@@ -94,6 +96,7 @@ input.form-control {
     height: auto;
   }
 }
+*/
 
 .btn.btn-default {
   background-color: #0CAA41;
