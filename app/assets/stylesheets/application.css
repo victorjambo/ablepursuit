@@ -77,12 +77,12 @@ input.form-control {
   color: #0d0d0d;
   font-weight: bold;
   margin: 0;
-  height: 72px;
+  height: 20px;
   display: block;
 }
 
 .cell-body > p {
-  height: 72px;
+  height: 130px;
   margin-top: 10px;
 }
 /*

@@ -1,4 +1,4 @@
-<%= form_for(profile, multipart: true) do |f| %>
+<%= simple_form_for(profile, multipart: true) do |f| %>
   <% if profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -15,37 +15,19 @@
     <%= image_tag profile.avatar.url %>
   <% end %>
 
-  <div class="field">
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar, :as => :file, :hint => image_tag(f.object.avatar.url) %>
-  </div>
+  <%= f.input :avatar, as: :file, wrapper: :vertical_file_input %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
 
-  <div class="field">
-    <%= f.label :tag_list, "Tags (Separate with comma)" %>
-    <%= f.text_field :tag_list %>
-  </div>
+  <%= f.input :title, placeholder: 'Business name' %>
 
-  <div class="field">
-    <%= f.label :url %>
-    <%= f.text_field :url %>
-  </div>
+  <%= f.input :tag_list, label: 'Category', placeholder: 'Enter Category Separate with comma' %>
+  
+  <%= f.input :url, label: 'Website', placeholder: 'Website' %>
 
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
+  <%= f.input :content, label: 'Business description' %>
 
-  <div class="field">
-    <%= f.label :preview %>
-    <%= f.text_field :preview %>
-  </div>
+  <%= f.input :preview, label: 'Business description', placeholder: 'preview' %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.button :submit %>
+
 <% end %>
