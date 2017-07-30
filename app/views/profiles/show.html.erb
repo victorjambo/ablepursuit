@@ -35,13 +35,13 @@
     <div class="col-md-4">
       
       <!-- Blog Search Well -->
-      <div class="well">
+      <div class="well" id="show-search">
         <h4>Search</h4>
         <%= form_tag profiles_path, :method => 'get', class: 'form-inline' do %>
           <div class="input-group">
             <%= search_field_tag :search, params[:search], type: "text", class: "form-control", size: "100%", placeholder: "Company name" %>
             <span class="input-group-btn">
-              <%= submit_tag "", class: "btn btn-default", type: "button" %>
+              <%= submit_tag "", class: "btn btn-default" %>
             </span>
           </div>
         <% end %>
