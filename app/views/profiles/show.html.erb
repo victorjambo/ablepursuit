@@ -6,11 +6,13 @@
     <!-- Blog Post Content Column -->
     <div class="col-lg-8">
       <!-- Title -->
-      <h1><%= @profile.title %></h1>
+      <h1 style="font-size: 55px;"><%= @profile.title %></h1>
 
       <!-- Tags -->
       <p class="lead">
-        <%= raw @profile.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+        <% @profile.tag_list.map do |t| %>
+          <span class="label label-primary"><%= link_to t, tag_path(t), style: "color: white;" %></span>
+        <% end %>
       </p>
 
       <hr>

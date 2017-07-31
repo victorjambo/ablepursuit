@@ -90,18 +90,6 @@ input.form-control {
   height: 130px;
   margin-top: 10px;
 }
-/*
-
-Messing things up
-@media only screen and (min-width: 991px) {
-  .cell-body > h4 {
-    height: auto;
-  }
-  .cell-body > p {
-    height: auto;
-  }
-}
-*/
 
 .btn.btn-default {
   background-color: #0CAA41;
@@ -126,38 +114,6 @@ a.btn.btn-default > span {
   border-radius: 2px;
   text-align: center;
   font-weight: bold;
-}
-
-/* fa icons*/
-#pics > #cliff, #water {
-  display: inline-block;
-  float: left;
-  width: 50%;
-  color: #fff;
-  font-size: 14px;
-}
-
-#pics > #cliff {
-  background: url('https://media.glassdoor.com/home/feature-link/com/KYW_Blog-750x370.jpg');
-  background-size: cover;
-  height: 350px;
-}
-
-#pics > #water {
-  background: url('https://media.glassdoor.com/home/feature-link/com/1_BainCompany-750x370.jpg');
-  background-size: cover;
-  height: 350px;
-}
-
-#pics .overlay {
-  background: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 /* not used */
@@ -533,6 +489,111 @@ a.btn.btn-default > span {
 
 /** image in show page **/
 .show-image {
+  background-color: #f1f1f1;
   width: 900px;
   height: 300px;
+}
+
+/** About us page **/
+header.about-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+
+  /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header.about-header > .container {
+  position: relative; 
+  background: transparent;
+}
+
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  background-color: transparent;
+  border: none;
+  margin-top: 130px;
+}
+
+.thumbnail > .caption > h3 {
+  color: #fff;
+  font-size: 90px;
+  font-family: 'Oxygen', sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.thumbnail > .caption > div > p {
+  color: #fff;
+  text-align: center;
+  font-size: 21px;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.mbr-article {
+  color: #777;
+  font-size: 17px;
+  line-height: 27px;
+  position: relative;
+  margin-top: -21px;
+  top: 14px;
+  text-align: justify;
+}
+
+.mbr-article--wysiwyg blockquote {
+  font-size: 17px;
+  border-color: #f97352;
+  margin: 0 0 10px 0;
+}
+
+.mbr-figure__img {
+  width: 100%;
+}
+
+.mbr-figure__caption {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  color: #fff;
+  display: block;
+  font-size: 17px;
+  left: 0;
+  line-height: 1.3em;
+  min-height: 53px;
+  padding: 17px 20px;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+}
+
+.mbr-figure--full-width {
+  display: block;
+  width: 100%;
+}
+
+.mbr-figure {
+  display: inline-block;
+  line-height: 1px;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.mbr-figure__caption-small {
+  display: block;
+  font-size: 14px;
+  line-height: 1.3em;
+}
+
+.entry-content {
+  text-align: justify;
+  color: #777;
+  font-size: 15px;
+  line-height: 27px;
 }

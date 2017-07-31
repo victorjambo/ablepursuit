@@ -18,6 +18,6 @@ class Profile < ApplicationRecord
 		else
 			all.order("created_at DESC")
 		end
-  end
+	end
   
 end

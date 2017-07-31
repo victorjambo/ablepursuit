@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pages/about'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   get 'tags/:tag', to: 'profiles#index', as: :tag

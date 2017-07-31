@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+	protect_from_forgery with: :exception
 
-  before_filter :store_location
+	before_filter :store_location
 
 	def store_location
 	  # store last url as long as it isn't a /users path
