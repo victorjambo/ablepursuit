@@ -19,3 +19,9 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# cached images
+public/system
+
+# precompiled rails admin assets
+public/assets
