@@ -17,6 +17,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
   gem 'rails-assets-jquery'
   gem 'rails-assets-tether'
+  gem 'rails-assets-chosen'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

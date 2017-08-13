@@ -37,14 +37,14 @@
             <li><%= link_to "Home", root_path %></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu scrollable-menu">
                 <% ActsAsTaggableOn::Tag.all.each do |tagging| %>
                   <li><%= link_to tagging, tag_path(tagging.name) %></li>
                 <% end %>
               </ul>
             </li>
             <li><%= link_to 'About', pages_about_path %></li>
-            <li><a href="http://ablepursuit.com/contact-us/">Contact</a></li>
+            <li><a href="#footer">Contact</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -55,15 +55,15 @@
 		<%= yield %>
 
 		<!-- The content of your page would go here. -->
-    <footer class="footer-distributed">
+    <footer class="footer-distributed" id="footer">
       <div class="footer-left">
         <h3>Able<span>Pursuit</span></h3>
         <p class="footer-links">
-          <a href="#">Home</a>
+          <%= link_to "Home", root_path %>
           ·
-          <a href="#">Become a member</a>
+          <a href="https://ablepursuit.com">Become a member</a>
           ·
-          <a href="#">About</a>
+          <%= link_to 'About', pages_about_path %>
           ·
           <a href="#">Contact</a>
         </p>
@@ -101,6 +101,13 @@
         </div>
       </div>
     </footer>
+
+    <div id="go-top">
+      <a href="#top">
+        <i class="fa fa-caret-up"></i><br>
+        Top
+      </a>
+    </div>
     
   </body>
 </html>

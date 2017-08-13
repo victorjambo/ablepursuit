@@ -48,13 +48,26 @@ jQuery(document).ready(function($) {
   }
 
   // change css
-  var urlRegex = /(profiles|users)/; //regex
+  var urlRegex = /(profiles\/\d+|users)/; //regex
   var match = window.location.pathname.match(urlRegex); //returns true or false
   if (match) { 
     $('.navbar-custom .nav li a, .navbar-custom .navbar-brand').css({
       color: "#000"
     });
   }
+
+  $(window).scroll(function() {
+    if($(document).scrollTop() > 10) {
+      $('#go-top').css({
+        display: "block"
+      });
+    }
+    else {
+      $('#go-top').css({
+        display: "none"
+      });
+    }
+  });
 
 });
 

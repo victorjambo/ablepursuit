@@ -7,8 +7,10 @@ class ProfilesController < ApplicationController
   def index
     if params[:tag]
       @profiles = Profile.tagged_with(params[:tag])
+      #redirect_to "#{request.url}#my-container", notice: "Showing results for \'#{params[:tag]}\'"
     else
       @profiles = Profile.Search(params[:search])
+      flash[:notice] = "no results found for \'#{params[:search]}\'" if @profiles.empty?
     end
   end
 

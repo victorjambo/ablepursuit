@@ -46,6 +46,10 @@ input.form-control {
   height: 55px;
 }
 
+.subheading {
+  font-style: italic;
+}
+
 /* container */
 @media only screen and (max-width: 1078px) {
   #show-search {
@@ -116,13 +120,6 @@ a.btn.btn-default > span {
   font-weight: bold;
 }
 
-/* not used */
-.ellipsify {
-  overflow: hidden
-  text-overflow: ellipsis
-  white-space: nowrap
-}
-
 /* navbar & header */
 
 .navbar-custom {
@@ -148,6 +145,13 @@ a.btn.btn-default > span {
   font-weight: 800;
   letter-spacing: 1px;
 }
+
+.scrollable-menu {
+    height: auto;
+    max-height: 250px;
+    overflow-x: hidden;
+}
+
 @media only screen and (min-width: 768px) {
   .navbar-custom {
     background: transparent;
@@ -496,13 +500,13 @@ a.btn.btn-default > span {
 
 /** About us page **/
 header.about-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+  opacity: 0.9;
 
   /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header.about-header > .container {
@@ -596,4 +600,23 @@ header.about-header > .container {
   color: #777;
   font-size: 15px;
   line-height: 27px;
+}
+
+/* Back to top navigation */
+#go-top {
+  background: none repeat scroll 0 0 #0CAA41;
+  border-radius: 2px;
+  bottom: 20px;
+  color: white;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  right: 10px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+#go-top > a {
+  color: inherit;
+  text-decoration: none;
 }

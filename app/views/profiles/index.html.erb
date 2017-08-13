@@ -15,8 +15,10 @@
                 </span>
               </div>
             <% end %>
-
-          <span class="subheading">Search</span>
+            
+          <% if notice %>
+            <span class="subheading"><%= notice %></span>
+          <% end %>
         </div>
       </div>
     </div>
