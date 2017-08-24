@@ -1,4 +1,8 @@
-# See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+# Greetings, human beings!,
+#
+# If you're sniffing around this file, and you're not a robot, we're looking to meet curious folks such as yourself.
+#
+# Run - don't crawl
 #
 # To ban all spiders from the entire site uncomment the next two lines:
 # User-agent: *

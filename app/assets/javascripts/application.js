@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
   }
 
   $(window).scroll(function() {
-    if($(document).scrollTop() > 10) {
+    if($(document).scrollTop() > 552) {
       $('#go-top').css({
         display: "block"
       });
