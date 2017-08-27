@@ -53,7 +53,7 @@ input.form-control {
 /* container */
 @media only screen and (max-width: 1078px) {
   #show-search {
-    visibility: hidden;
+    display: none;
   }
 }
 .container > h2 {

@@ -11,22 +11,29 @@
     </div>
   <% end %>
 
-  <% if !profile.avatar.url.include?("missing") %>
-    <%= image_tag profile.avatar.url %>
-  <% end %>
+  <%= image_tag profile.avatar.url if profile.avatar.present? %>
+
 
   <%= f.input :avatar, as: :file, wrapper: :vertical_file_input %>
-
 
   <%= f.input :title, placeholder: 'Business name' %>
 
   <%= f.input :tag_list, label: 'Category', placeholder: 'Enter Category Separate with comma' %>
   
-  <%= f.input :url, label: 'Website', placeholder: 'Website' %>
 
   <%= f.input :content, label: 'Business description' %>
 
-  <%= f.input :preview, label: 'Business description', placeholder: 'preview' %>
+  <h3>references</h3><br>
+  
+  <%= f.input :url, label: 'Website', placeholder: 'Website' %>
+
+  <%= f.input :facebook, label: 'facebook', placeholder: 'facebook' %>
+
+  <%= f.input :twitter, label: 'twitter', placeholder: 'twitter' %>
+
+  <%= f.input :instagram, label: 'instagram', placeholder: 'instagram' %>
+
+  <%= f.input :location, label: 'location', placeholder: 'location' %>
 
   <%= f.button :submit %>
 

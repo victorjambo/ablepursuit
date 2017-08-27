@@ -16,7 +16,21 @@
       <hr>
 
       <!-- Date/Time -->
-      <p><span class="glyphicon glyphicon-time"></span> Posted on <%= @profile.created_at.strftime("%b %d, %Y") %></p>
+      <div class="row">
+        <div class="col-md-6">
+          <p><span class="glyphicon glyphicon-time"></span> Posted on <%= @profile.created_at.strftime("%b %d, %Y") %></p>
+        </div>
+
+        <div class="col-md-6 text-right">
+          <p>
+            <% if user_signed_in? %>
+              <%= link_to edit_profile_path do %>
+                <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+              <% end %>
+            <% end -%>
+          </p>
+        </div>
+      </div>
 
       <hr>
 
@@ -25,7 +39,7 @@
       <hr>
 
       <!-- Post Content -->
-      <p class="lead"><%= @profile.preview %></p>
+      
       <p><%= @profile.content %></p>
 
       <hr>
@@ -51,10 +65,33 @@
       <div class="well">
         <h4>References</h4>
         <ul class="list-unstyled">
-          <li>Website: <%= link_to @profile.url %></li>
-          <li>Facebook: /company</li>
-          <li>twitter: @company</li>    
-          <li>Location: Nairobi, Kenya</li> 
+          <li style="<%= "display: none;" if @profile.url.empty? %>">
+            Website: 
+            <a href="<%= @profile.url %>">
+              <%= @profile.url %>              
+            </a>
+          </li>
+          <li style="<%= "display: none;" if @profile.facebook.empty? %>">
+            facebook: 
+            <a href="https://www.facebook.com/<%= @profile.facebook %>" target="blank" >
+              <%= @profile.facebook %>
+            </a>
+          </li>
+          <li style="<%= "display: none;" if @profile.twitter.empty? %>">
+            twitter: 
+            <a href="https://www.twitter.com/<%= @profile.twitter %>" target="blank" >
+              <%= @profile.twitter %>              
+            </a>
+          </li>  
+          <li style="<%= "display: none;" if @profile.instagram.empty? %>">
+            instagram: 
+            <a href="https://www.instagram.com/<%= @profile.instagram %>" target="blank" >
+              <%= @profile.instagram %>                
+            </a>
+          </li>
+          <li style="<%= "display: none;" if @profile.location.empty? %>">
+            Location: <%= @profile.location %>
+          </li>
         </ul>
       </div>
 
