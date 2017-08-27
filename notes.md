@@ -17,19 +17,12 @@
 * only require login at /admin
 * handle missing avatars
 * load more...
+* auto scroll `$('#my-container')[0].scrollIntoView(true)`
+* parallax images
 
 ## bugs
 * search only works when hit enter. button not working
 * customize text below search
-
-
-```
-.ellipsify {
-	overflow: hidden
-	text-overflow: ellipsis
-	white-space: nowrap
-}
-```
 
 _Reference:_ `https://tenforward.consulting/blog/css-responsive-trick-ellipsify-class`
 

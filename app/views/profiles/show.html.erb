@@ -80,7 +80,7 @@
           <li style="<%= "display: none;" if @profile.twitter.empty? %>">
             twitter: 
             <a href="https://www.twitter.com/<%= @profile.twitter %>" target="blank" >
-              <%= @profile.twitter %>              
+              <%= "@#{@profile.twitter}" %>              
             </a>
           </li>  
           <li style="<%= "display: none;" if @profile.instagram.empty? %>">

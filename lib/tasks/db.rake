@@ -16,4 +16,15 @@ namespace :db do
 			end
 		me.save
 	end
+
+	task sociallinks: :environment do
+		Profile.all.each do |profile|
+			profile.facebook = ''
+			profile.twitter = ''
+			profile.instagram = ''
+			profile.location = ''
+			profile.save
+		end		
+	end
+
 end
