@@ -12,6 +12,7 @@ gem 'paperclip', '~> 5.1'
 gem 'rails_admin', '~> 1.2'
 gem 'acts-as-taggable-on', '~> 5.0'
 gem 'simple_form'
+gem 'select2-rails'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'

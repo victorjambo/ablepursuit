@@ -69,4 +69,4 @@ If you discover any security related issues, please email me at [Victor Mutai](v
 
 Copyright (c) 2017 Victor Mutai <victorjambo@live.com>
 
-The Learn Party is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The AblePursuit is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).

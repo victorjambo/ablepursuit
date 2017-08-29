@@ -13,6 +13,7 @@
 //= require jquery
 //= require tether
 //= require bootstrap
+//= require select2-full
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
@@ -24,8 +25,8 @@ jQuery(document).ready(function($) {
 
   //primary navigation slide-in effect
   if ($(window).width() > MQL) {
-    var headerHeight = $('.navbar-custom').height();
-    $(window).on('scroll', {
+    var headerHeight = $(".navbar-custom").height();
+    $(window).on("scroll", {
       previousTop: 0
     },
     function() {
@@ -33,15 +34,17 @@ jQuery(document).ready(function($) {
       //check if user is scrolling up
       if (currentTop < this.previousTop) {
         //if scrolling up...
-        if (currentTop > 0 && $('.navbar-custom').hasClass('is-fixed')) {
-          $('.navbar-custom').addClass('is-visible');
+        if (currentTop > 0 && $(".navbar-custom").hasClass("is-fixed")) {
+          $(".navbar-custom").addClass("is-visible");
         } else {
-          $('.navbar-custom').removeClass('is-visible is-fixed');
+          $(".navbar-custom").removeClass("is-visible is-fixed");
         }
       } else if (currentTop > this.previousTop) {
-          //if scrolling down...
-          $('.navbar-custom').removeClass('is-visible');
-          if (currentTop > headerHeight && !$('.navbar-custom').hasClass('is-fixed')) $('.navbar-custom').addClass('is-fixed');
+        //if scrolling down...
+        $(".navbar-custom").removeClass("is-visible");
+        if (currentTop > headerHeight && !$(".navbar-custom").hasClass("is-fixed")) {
+          $(".navbar-custom").addClass("is-fixed");
+        }
       }
       this.previousTop = currentTop;
     });
@@ -51,19 +54,19 @@ jQuery(document).ready(function($) {
   var urlRegex = /(profiles\/\d+|users)/; //regex
   var match = window.location.pathname.match(urlRegex); //returns true or false
   if (match) { 
-    $('.navbar-custom .nav li a, .navbar-custom .navbar-brand').css({
+    $(".navbar-custom .nav li a, .navbar-custom .navbar-brand").css({
       color: "#000"
     });
   }
 
   $(window).scroll(function() {
     if($(document).scrollTop() > 552) {
-      $('#go-top').css({
+      $("#go-top").css({
         display: "block"
       });
     }
     else {
-      $('#go-top').css({
+      $("#go-top").css({
         display: "none"
       });
     }
@@ -80,4 +83,5 @@ $(document).ready(function () {
       $("button.navbar-toggle").click();
     }
   });
+  
 });
