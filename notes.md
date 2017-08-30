@@ -9,6 +9,9 @@
 * design show page
 * mobile view (esp search)
 * about & contact us. check jumia
+* Add Page model
+* mailing with mandrill
+* image cropping with jruby 
 
 ## Clean-up
 * redirect when tries to access unauthorised pages
