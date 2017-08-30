@@ -15,12 +15,15 @@
 //= require bootstrap
 //= require select2-full
 //= require jquery_ujs
+//= require pnotify
+//= require jquery.lazyload.js
 //= require turbolinks
 //= require_tree .
 
 
 // Navigation Scripts to Show Header on Scroll-Up
-jQuery(document).ready(function($) {
+$(document).on('turbolinks:load', function() {
+  $("header").lazyload();
   var MQL = 1170;
 
   //primary navigation slide-in effect
@@ -50,7 +53,7 @@ jQuery(document).ready(function($) {
     });
   }
 
-  // change css
+  // change css on show page
   var urlRegex = /(profiles\/\d+|users)/; //regex
   var match = window.location.pathname.match(urlRegex); //returns true or false
   if (match) { 
@@ -59,6 +62,7 @@ jQuery(document).ready(function($) {
     });
   }
 
+  // back to top link
   $(window).scroll(function() {
     if($(document).scrollTop() > 552) {
       $("#go-top").css({
@@ -72,10 +76,7 @@ jQuery(document).ready(function($) {
     }
   });
 
-});
-
-
-$(document).ready(function () {
+  // Navbar harmburger menu disappear on click out 
   $(document).click(function (event) {
     var clickover = $(event.target);
     var _opened = $(".navbar-collapse").hasClass("collapse in");
@@ -83,5 +84,6 @@ $(document).ready(function () {
       $("button.navbar-toggle").click();
     }
   });
+
   
 });

@@ -13,11 +13,24 @@
  *= require bootstrap
  *= require select2
  *= require select2-bootstrap
+ *= require pnotify
  *= require_tree .
  *= require_self
  */
 
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i');
+
+* {
+    font-family: Roboto;
+  }
+
+  {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+    color: rgba(37, 51, 70, .9);
+  }
 
 html, body {
   height: 100%;
@@ -48,15 +61,14 @@ input.form-control {
   height: 55px;
 }
 
-.subheading {
-  font-style: italic;
-}
-
 /* container */
 @media only screen and (max-width: 1078px) {
   #show-search {
     display: none;
   }
+}
+.container {
+  color: rgba(37, 51, 70, .9);
 }
 .container > h2 {
   padding: 20px 0;
@@ -76,6 +88,9 @@ input.form-control {
   border: 2px;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.2);
   overflow: hidden;
+
+  text-align: justify;
+  font-size: 15px;
 }
 
 .cell-body {
@@ -130,28 +145,52 @@ a.btn.btn-default > span {
   left: 0;
   width: 100%;
   z-index: 3;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto';
+  color: rgba(37, 51, 70, .9);
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
+  font-family: 'Roboto';
+  color: rgba(37, 51, 70, .9);
 }
 .navbar-custom .navbar-header .navbar-toggle {
   color: #777777;
   font-weight: 800;
-  text-transform: uppercase;
   font-size: 12px;
+  font-family: 'Roboto';
+  color: rgba(37, 51, 70, .9);
 }
 .navbar-custom .nav li a {
-  text-transform: uppercase;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 1px;
+  font-family: 'Roboto';
+  color: rgba(37, 51, 70, .9);
 }
 
+.navbar-custom .nav li a:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/*category*/
+
 .scrollable-menu {
-    height: auto;
-    max-height: 250px;
-    overflow-x: hidden;
+  height: auto;
+  max-height: 250px;
+  overflow-x: hidden;
+  color: rgba(37, 51, 70, .9);
+}
+
+.col-lg-8 > p {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+  color: rgba(37, 51, 70, .9);
+}
+
+.navbar-brand, .navbar-right  {
+  margin-left: 0px!important;
+  margin-right: 0px!important;
 }
 
 @media only screen and (min-width: 768px) {
@@ -162,6 +201,7 @@ a.btn.btn-default > span {
   .navbar-custom .navbar-brand {
     color: white;
     padding: 20px;
+    font-size: 21px;
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
@@ -278,7 +318,7 @@ a.btn.btn-default > span {
   font-size: 24px;
   line-height: 1.1;
   display: block;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto';
   font-weight: 300;
   margin: 10px 0 0;
 }
@@ -297,13 +337,13 @@ a.btn.btn-default > span {
   display: block;
 }
 .intro-header .post-heading .subheading {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto';
   font-size: 24px;
   margin: 10px 0 30px;
   font-weight: 600;
 }
 .intro-header .post-heading .meta {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Roboto';
   font-style: italic;
   font-weight: 300;
   font-size: 20px;
@@ -528,7 +568,7 @@ header.about-header > .container {
 .thumbnail > .caption > h3 {
   color: #fff;
   font-size: 90px;
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Roboto';
   letter-spacing: 1px;
   font-weight: bold;
   line-height: 1.1;
@@ -539,7 +579,7 @@ header.about-header > .container {
   color: #fff;
   text-align: center;
   font-size: 21px;
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Roboto';
 }
 
 .mbr-article {
