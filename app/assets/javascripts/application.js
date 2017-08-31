@@ -15,8 +15,6 @@
 //= require bootstrap
 //= require select2-full
 //= require jquery_ujs
-//= require pnotify
-//= require lazyload.js
 //= require turbolinks
 //= require_tree .
 
