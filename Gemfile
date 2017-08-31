@@ -14,7 +14,6 @@ gem 'acts-as-taggable-on', '~> 5.0'
 gem 'simple_form'
 gem 'select2-rails'
 gem 'pnotify-rails'
-gem 'lazyload-rails', '~> 0.3.1'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'

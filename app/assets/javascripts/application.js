@@ -16,14 +16,19 @@
 //= require select2-full
 //= require jquery_ujs
 //= require pnotify
-//= require jquery.lazyload.js
+//= require lazyload.js
 //= require turbolinks
 //= require_tree .
 
 
 // Navigation Scripts to Show Header on Scroll-Up
 $(document).on('turbolinks:load', function() {
-  $("header").lazyload();
+  $("header.lazyload").lazyload();
+
+  //let timeout = setTimeout(function() {
+  //  lazyload();
+  //}, 5000);
+
   var MQL = 1170;
 
   //primary navigation slide-in effect
