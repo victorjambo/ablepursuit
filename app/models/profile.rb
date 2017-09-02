@@ -19,4 +19,8 @@ class Profile < ApplicationRecord
 			all.order("created_at DESC")
 		end
 	end
+
+	extend FriendlyId
+  friendly_id :title, use: :slugged
+
 end

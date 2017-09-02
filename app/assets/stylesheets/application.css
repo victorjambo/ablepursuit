@@ -13,6 +13,7 @@
  *= require bootstrap
  *= require select2
  *= require select2-bootstrap
+ *= require pnotify
  *= require_tree .
  *= require_self
  */
@@ -29,7 +30,11 @@
     line-height: 30px;
     text-align: justify;
     color: rgba(37, 51, 70, .9);
+    border:1px solid rgba(37, 51, 70, .9);
   }
+  img:hover {
+    opacity: 0.8;
+}
 
 html, body {
   height: 100%;
@@ -660,4 +665,13 @@ header.about-header > .container {
 #go-top > a {
   color: inherit;
   text-decoration: none;
+}
+
+
+.round{
+  border-radius:5px;
+}
+
+.stack-bar-top{
+  top: 50px;
 }

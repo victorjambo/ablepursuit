@@ -13,7 +13,9 @@ gem 'rails_admin', '~> 1.2'
 gem 'acts-as-taggable-on', '~> 5.0'
 gem 'simple_form'
 gem 'select2-rails'
-# gem 'pnotify-rails'
+gem 'pnotify-rails'
+gem 'unobtrusive_flash', '>=3'
+gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'

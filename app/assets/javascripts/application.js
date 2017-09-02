@@ -16,6 +16,8 @@
 //= require select2-full
 //= require jquery_ujs
 //= require turbolinks
+//= require pnotify
+//= require unobtrusive_flash
 //= require_tree .
 
 
@@ -88,5 +90,44 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
+  // scroll to middle of page after search or tags
+  var searchRegex = /(search|tags)/; //regex
+  var searchMatching = window.location.href.match(searchRegex); //returns true or false
+  if (searchMatching) { 
+    $('#my-container')[0].scrollIntoView(true);
+  }
+
+  // contact us
+  var name = $('#name').val();
+  var email = $('#name').val();
+  var subject = {};
+  $('select[id="subject"]').change(function(e) {
+    subject = $(this).val();
+  });
+  var message = $('#message').val();
+  $('#btnContactUssdsda').click(function() {
+    $.ajax({
+      url: "http://ablepursuit.com/contact-us/#wpcf7-f57-p105-o1",
+      data: {
+        "your-name": name,
+        "your-email": email,
+        "your-subject": subject,
+        "your-message": message
+      },
+      type: "POST",
+      dataType: "xml",
+      statusCode: {
+        0: function() {
+          
+        },
+        200: function() {
+          
+        },
+      },
+    });
+  });
+  $('#name').value = '';
+  $('#email').value = '';
+  $('#message').value = '';
   
 });

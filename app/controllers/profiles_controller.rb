@@ -1,13 +1,12 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  
+
   # GET /profiles
   # GET /profiles.json
   def index
     if params[:tag]
       @profiles = Profile.tagged_with(params[:tag])
-      #redirect_to "#{request.url}#my-container", notice: "Showing results for \'#{params[:tag]}\'"
     else
       @profiles = Profile.Search(params[:search])
       flash[:notice] = "no results found for \'#{params[:search]}\'" if @profiles.empty?
@@ -54,7 +53,7 @@ class ProfilesController < ApplicationController
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @profile }
       else
-        format.html { render :edit }
+        format.html { render :new }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
       end
     end
@@ -73,7 +72,7 @@ class ProfilesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
-      @profile = Profile.find(params[:id])
+      @profile = Profile.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

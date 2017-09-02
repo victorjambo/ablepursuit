@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170827115858) do
+ActiveRecord::Schema.define(version: 20170902205402) do
 
   create_table "impressions", force: :cascade do |t|
     t.string   "impressionable_type"
@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(version: 20170827115858) do
     t.string   "twitter"
     t.string   "instagram"
     t.string   "location"
+    t.string   "slug"
+    t.index ["slug"], name: "index_profiles_on_slug", unique: true
   end
 
   create_table "taggings", force: :cascade do |t|
