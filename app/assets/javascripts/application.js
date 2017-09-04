@@ -23,6 +23,7 @@
 
 // Navigation Scripts to Show Header on Scroll-Up
 $(document).on('turbolinks:load', function() {
+  $(".se-pre-con").fadeOut("slow");
   $("header.lazyload").lazyload();
 
   //let timeout = setTimeout(function() {
