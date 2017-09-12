@@ -6,7 +6,7 @@ namespace :db do
 			User.last.profiles.create(
 				title: Faker::GameOfThrones.character,
 				url: Faker::Internet.url,
-				content: Faker::Lorem.paragraphs(5),
+				content: Faker::Lorem.paragraphs(5).join(','),
 				facebook: Faker::Lorem.word,
 				twitter: Faker::Lorem.word,
 				instagram: Faker::Lorem.word,

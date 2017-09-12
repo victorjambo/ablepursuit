@@ -60,7 +60,7 @@ $(document).on('turbolinks:load', function() {
   }
 
   // change css on show page
-  var urlRegex = /(profiles\/\d+|users)/; //regex
+  var urlRegex = /(profiles|users)/; //regex
   var match = window.location.pathname.match(urlRegex); //returns true or false
   if (match) { 
     $(".navbar-custom .nav li a, .navbar-custom .navbar-brand").css({
