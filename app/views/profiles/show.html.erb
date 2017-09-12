@@ -105,6 +105,20 @@
           </div>
         </div>
       <% end %>
+      
+      <div class="well">
+        <h4>Browse by category</h4>
+          <div class="row">
+            <div class="col-lg-6">
+            <ul class="list-unstyled">
+              <% ActsAsTaggableOn::Tag.first(5).each do |tagging| %>
+                <li><%= link_to tagging, tag_path(tagging.name) %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
     </div>
 
   </div>
