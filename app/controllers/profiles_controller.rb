@@ -18,6 +18,7 @@ class ProfilesController < ApplicationController
   def show
     impressionist(@profile)
     @profiles = Profile.all
+    @similar_profiles = Profile.tagged_with(@profile.tags)
   end
 
   # GET /profiles/new
