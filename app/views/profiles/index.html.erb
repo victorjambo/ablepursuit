@@ -32,14 +32,14 @@
       <div class="col-md-4">
         <div class="my-box">
           <%= link_to profile do %>
-            <%= image_tag profile.avatar.url, class: "img-responsive" %>
+            <%= image_tag profile.avatar.url, class: "img-responsive shadow" %>
           <% end %>
           <div class="cell-body">
             <h4><%= profile.title %></h4>
-            <p><%= truncate profile.content, length: 250 %></p>
-            <%= link_to profile, class: 'btn btn-default' do %>
-              <span>Read more</span>
-            <% end %>
+            <p><%= profile.content %>&nbsp;<%= link_to 'read more', profile %></p>
+            <%#= link_to profile, class: 'btn btn-default' do %>
+              <!--span>Read more</span-->
+            <%# end %>
           </div>
         </div>
       </div>

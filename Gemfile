@@ -16,7 +16,7 @@ gem 'select2-rails'
 gem 'pnotify-rails'
 gem 'unobtrusive_flash', '>=3'
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
-gem 'faker', '~> 1.8', '>= 1.8.4'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
@@ -67,6 +67,7 @@ group :development do
   gem 'pry-rails', '~> 0.3.6'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  gem 'faker', '~> 1.8', '>= 1.8.4'
 end
 
 group :production do

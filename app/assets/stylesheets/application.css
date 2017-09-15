@@ -14,24 +14,24 @@
  *= require select2
  *= require select2-bootstrap
  *= require pnotify
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
 
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i');
 
 * {
     font-family: Roboto;
   }
 
-  {
-    font-size: 20px;
-    line-height: 30px;
-    text-align: justify;
-    color: rgba(37, 51, 70, .9);
-    border:1px solid rgba(37, 51, 70, .9);
-  }
+.not-used{
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+  color: rgba(37, 51, 70, .9);
+  border:1px solid rgba(37, 51, 70, .9);
+}
   img:hover {
     opacity: 0.8;
 }
@@ -47,7 +47,7 @@ ul {
 
 /* Search button */
 .input-group-btn > .btn.btn-default {
-  background-image: url('https://static.glassdoor.com/static/img/home/icon-search-white.svg?v=45f04c1x6');
+  background-image: url('/images/icon-search-white.svg');
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #0CAA41;
@@ -106,7 +106,7 @@ input.form-control {
   line-height: 1.33;
   color: #0d0d0d;
   font-weight: bold;
-  margin: 0;
+  margin-top: -15px;
   height: 20px;
   display: block;
 }
@@ -540,8 +540,12 @@ a.btn.btn-default > span {
 /** image in show page **/
 .show-image {
   background-color: #f1f1f1;
-  width: 900px;
-  height: 300px;
+  width: 100%;
+}
+
+/*** box-shadow ***/
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /** About us page **/
