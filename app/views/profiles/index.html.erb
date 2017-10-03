@@ -1,11 +1,11 @@
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below.background: url('https://media.glassdoor.com/home/hero.jpg'); -->
-<header class="intro-header lazyload" style="background-image: url('/images/placeholder/intro.jpg" data-src="/images/intro.jpg">
+<header class="intro-header lazyload" style="background-image: url('/images/placeholder/intro.jpg" data-src="/images/intro-min.jpg">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="site-heading">
-          <h1>AblePursuit</h1>
+          <h1>Custolive</h1>
             
             <%= form_tag profiles_path, :method => 'get', class: 'form-inline' do %>
               <div class="input-group">
@@ -36,7 +36,7 @@
           <% end %>
           <div class="cell-body">
             <h4><%= profile.title %></h4>
-            <p><%= profile.content %>&nbsp;<%= link_to 'read more', profile %></p>
+            <p><%= profile.tagline %>&nbsp;<%= link_to 'read more', profile %></p>
             <%#= link_to profile, class: 'btn btn-default' do %>
               <!--span>Read more</span-->
             <%# end %>

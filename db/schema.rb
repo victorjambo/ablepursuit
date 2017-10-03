@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170902205402) do
+ActiveRecord::Schema.define(version: 20170916075540) do
 
   create_table "impressions", force: :cascade do |t|
     t.string   "impressionable_type"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20170902205402) do
     t.string   "instagram"
     t.string   "location"
     t.string   "slug"
+    t.string   "tagline"
     t.index ["slug"], name: "index_profiles_on_slug", unique: true
   end
 

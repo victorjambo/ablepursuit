@@ -18,6 +18,8 @@
 
   <%= f.input :title, placeholder: 'Business name' %>
 
+  <%= f.input :tagline, placeholder: 'Tagline' %>
+
   <%= f.input :tag_list, collection: ActsAsTaggableOn::Tag.all.map(&:name) %>  
 
   <%= f.input :content, label: 'Business description' %>
