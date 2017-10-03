@@ -17,7 +17,6 @@ gem 'pnotify-rails'
 gem 'unobtrusive_flash', '>=3'
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
-gem 'sqlite3'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
@@ -68,10 +67,11 @@ group :development do
   gem 'pry-rails', '~> 0.3.6'
   # Use sqlite3 as the database for Active Record
   gem 'faker', '~> 1.8', '>= 1.8.4'
+  gem 'sqlite3'
 end
 
 group :production do
-  # gem 'pg'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
