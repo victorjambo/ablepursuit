@@ -65,31 +65,31 @@
       <div class="well">
         <h4>References</h4>
         <ul class="list-unstyled">
-          <li style='<%= "display: none;" unless @profile.url.present? %>'>
+          <li>
             Website: 
             <a href="<%= @profile.url %>">
               <%= @profile.url %>              
             </a>
           </li>
-          <li style="<%= "display: none;" unless @profile.facebook.present? %>">
+          <li>
             facebook: 
             <a href="https://www.facebook.com/<%= @profile.facebook %>" target="blank" >
               <%= @profile.facebook %>
             </a>
           </li>
-          <li style="<%= "display: none;" unless @profile.twitter.present? %>">
+          <li>
             twitter: 
             <a href="https://www.twitter.com/<%= @profile.twitter %>" target="blank" >
               <%= "@#{@profile.twitter}" %>              
             </a>
           </li>  
-          <li style="<%= "display: none;" unless @profile.instagram.present? %>">
+          <li>
             instagram: 
             <a href="https://www.instagram.com/<%= @profile.instagram %>" target="blank" >
               <%= @profile.instagram %>                
             </a>
           </li>
-          <li style="<%= "display: none;" unless @profile.location.present? %>">
+          <li>
             Location: <%= @profile.location %>
           </li>
         </ul>
