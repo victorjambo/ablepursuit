@@ -65,31 +65,31 @@
       <div class="well">
         <h4>References</h4>
         <ul class="list-unstyled">
-          <li style='<%= "display: none;" if @profile.url.empty? %>'>
+          <li style='<%= "display: none;" unless @profile.url.present? %>'>
             Website: 
             <a href="<%= @profile.url %>">
               <%= @profile.url %>              
             </a>
           </li>
-          <li style="<%= "display: none;" if @profile.facebook.empty? %>">
+          <li style="<%= "display: none;" unless @profile.facebook.present? %>">
             facebook: 
             <a href="https://www.facebook.com/<%= @profile.facebook %>" target="blank" >
               <%= @profile.facebook %>
             </a>
           </li>
-          <li style="<%= "display: none;" if @profile.twitter.empty? %>">
+          <li style="<%= "display: none;" unless @profile.twitter.present? %>">
             twitter: 
             <a href="https://www.twitter.com/<%= @profile.twitter %>" target="blank" >
               <%= "@#{@profile.twitter}" %>              
             </a>
           </li>  
-          <li style="<%= "display: none;" if @profile.instagram.empty? %>">
+          <li style="<%= "display: none;" unless @profile.instagram.present? %>">
             instagram: 
             <a href="https://www.instagram.com/<%= @profile.instagram %>" target="blank" >
               <%= @profile.instagram %>                
             </a>
           </li>
-          <li style="<%= "display: none;" if @profile.location.empty? %>">
+          <li style="<%= "display: none;" unless @profile.location.present? %>">
             Location: <%= @profile.location %>
           </li>
         </ul>
