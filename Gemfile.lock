@@ -283,5 +283,8 @@ DEPENDENCIES
   unobtrusive_flash (>= 3)
   web-console (>= 3.3.0)
 
+RUBY VERSION
+  ruby 2.3.4
+
 BUNDLED WITH
-   1.15.4
+   1.16.0
