@@ -67,14 +67,15 @@ group :development do
   gem 'pry-rails', '~> 0.3.6'
   # Use sqlite3 as the database for Active Record
   gem 'faker', '~> 1.8', '>= 1.8.4'
-  # gem 'sqlite3'
+  gem 'sqlite3'
 end
 
 group :production do
+  gem 'unicorn'
+  gem 'mysql2', '~> 0.4.9'
   # gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'pg'
