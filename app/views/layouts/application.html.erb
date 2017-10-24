@@ -30,7 +30,9 @@
             <span class="sr-only">Toggle navigation</span>
             Menu <i class="fa fa-bars"></i>
           </button>
-          <%= link_to "Custolive", root_path, class: "navbar-brand" %>
+          <%= link_to root_path, class: "navbar-brand", id: "navbar-logo" do %>
+            Custolive
+          <% end %>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -45,8 +47,9 @@
                 <% end %>
               </ul>
             </li>
-            <li><%= link_to 'About', pages_about_path %></li>
-            <li><%= link_to 'Contact', pages_contact_path %></li>
+            
+            <li><a href="http://ablepursuit.com/blog/">Blog</a></li>
+            
             <% if user_signed_in? %>
               <li>
                 <%= link_to destroy_user_session_path, method: :delete do %>
@@ -70,13 +73,11 @@
         <p class="footer-links">
           <%= link_to "Home", root_path %>
           ·
-          <a href="http://ablepursuit.com">Become a member</a>
+          <a href="http://ablepursuit.com/business">Advertise with Us</a>
           ·
-          <%= link_to 'About', pages_about_path %>
-          ·
-          <%= link_to 'Contact', pages_contact_path %>
+          <a href="http://ablepursuit.com/blog">Blog</a>
         </p>
-        <p class="footer-company-name">AblePursuit &copy; 2017</p>
+        <p class="footer-company-name">Powered by AblePursuit &copy; 2017</p>
       </div>
 
       <div class="footer-center">
@@ -85,10 +86,10 @@
           <p>East Africa</p>
         </div>
         <div>
-          <i class="fa fa-phone"></i>
+          <i class="fa fa-whatsapp"></i>
           <p>
             <span>+254 734 530 231</span>
-            <span>+254 718 464 940</span>
+            <span>+254 777 530 231</span>
           </p>
         </div>
         <div>
@@ -99,8 +100,9 @@
 
       <div class="footer-right">
         <p class="footer-company-about">
-          <span>About the company</span>
-          Custolive promotes #SDGs and showcases innovative products by businesses and personalities in Africa.
+          <span>About AblePursuit</span>
+          AblePursuit activates businesses in Africa by creating customized interpersonal relations & product experiences.<br/>
+          <strong>Industry:</strong> Communication & Information Technology
         </p>
         <div class="footer-icons">
           <a href="https://www.facebook.com/ablepursuit" target="blank"><i class="fa fa-facebook"></i></a>

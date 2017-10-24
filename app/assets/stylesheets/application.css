@@ -152,6 +152,11 @@ a.btn.btn-default > span {
   font-family: 'Roboto';
   color: rgba(37, 51, 70, .9);
 }
+
+.navbar-custom div {
+  margin: 0px 50px;
+}
+
 .navbar-custom .navbar-brand {
   font-weight: 800;
   font-family: 'Roboto';
@@ -699,3 +704,36 @@ header.about-header > .container {
 .similar-profiles {
   font-size: 17px;
 }
+
+/***horizantal icons***/
+#horizantal-icons {
+  background-color: rgba(240, 248, 255, 0.29);
+}
+
+.horizantal-icons-container {
+  margin: 50px;
+}
+
+.hz-icons{
+  display: inline;
+  max-width: 50%;
+}
+
+#horizantal-icons .container .row{
+  padding-bottom: 0px;
+}
+
+
+/***h2 above pins***/
+#my-container h2 {
+  text-align: center;
+  padding-bottom: 50px
+}
+
+
+
+
+
+
+
+

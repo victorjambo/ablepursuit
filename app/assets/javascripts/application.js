@@ -60,7 +60,7 @@ $(document).on('turbolinks:load', function() {
   }
 
   // change css on show page
-  var urlRegex = /(profiles|users)/; //regex
+  var urlRegex = /(profiles\/|users)/; //regex
   var match = window.location.pathname.match(urlRegex); //returns true or false
   if (match) { 
     $(".navbar-custom .nav li a, .navbar-custom .navbar-brand").css({
@@ -98,7 +98,7 @@ $(document).on('turbolinks:load', function() {
     $('#my-container')[0].scrollIntoView(true);
   }
 
-  // contact us
+  // contact us ***FEATURE REMOVED***
   var name = $('#name').val();
   var email = $('#name').val();
   var subject = {};
