@@ -715,8 +715,8 @@ header.about-header > .container {
 }
 
 .hz-icons{
-  display: inline;
-  max-width: 50%;
+  display: inline!important;
+  max-width: 50%!important;
 }
 
 #horizantal-icons .container .row{
