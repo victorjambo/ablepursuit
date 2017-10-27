@@ -1,50 +1,55 @@
 <!-- Page Content -->
-<div class="container" style="padding-top: 70px;">
+<div class="container" style="padding-top: 115px;">
   <div class="row">
     <!-- Blog Post Content Column -->
     <div class="col-lg-8">
-      <!-- Title -->
-      <h1 style="font-size: 55px;"><%= @profile.title %></h1>
-
-      <!-- Tags -->
-      <p class="lead">
-        <% @profile.tag_list.map do |t| %>
-          <span class="label label-primary"><%= link_to t, tag_path(t), style: "color: white;" %></span>
-        <% end %>
-      </p>
-
-      <hr>
-
-      <!-- Date/Time -->
-      <div class="row">
-        <div class="col-md-6">
-          <p><span class="glyphicon glyphicon-time"></span> Posted on <%= @profile.created_at.strftime("%b %d, %Y") %></p>
+      
+      <article class="full_post post type-post status-publish format-standard has-post-thumbnail hentry category-workspace tag-inspiration tag-workspace">
+        <div class="post-header">
+          <h1><%= @profile.title %></h1>
+          <div class="decorater">
+              <div class="line"><span class="dot"></span></div>
+          </div>
+          <div class="post-meta">
+            <div class="meta_date"><span class="posted">Posted on </span><%= @profile.created_at.strftime("%b %d, %Y") %></div>
+          </div>
         </div>
-
-        <div class="col-md-6 text-right">
-          <p>
-            <% if user_signed_in? %>
-              <%= link_to edit_profile_path do %>
-                <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+        <div class="post-img">
+          <%= image_tag @profile.avatar.url, class: "attachment-swanky-full-thumb size-swanky-full-thumb wp-post-image", alt: "profile image", width: "1080", height: "720" %>
+          </div>
+        <div class="content_post_wrap">
+          <div class="post-entry">
+            <p><%= @profile.tagline %></p>
+      
+            <p><%= @profile.content %></p>
+            
+            <div class="post-tags">
+              <h5 class="tags">Tags :</h5>
+              <span class="tags_wrap">
+                <% @profile.tag_list.map do |t| %>
+                  <%= link_to t, tag_path(t) %>
+                <% end %>
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="content_metabottom_wrap">
+          <div class="meta_bottom">
+            <div class="post-share">
+              <% if user_signed_in? %>
+                <div class="text_share">Edit profile</div>
+                <%= link_to edit_profile_path do %>
+                  <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+                <% end %>
               <% end %>
-            <% end -%>
-          </p>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <hr>
-
-      <%= image_tag @profile.avatar.url, class: "img-responsive show-image shadow", alt: "profile image" %>
-
-      <hr>
-
-      <!-- Post Content -->
+        
+      </article>
       
-      <p><%= @profile.tagline %></p>
-      
-      <p><%= @profile.content %></p>
 
-      <hr>
     </div>
 
     <!-- Blog Sidebar Widgets Column -->
@@ -65,35 +70,31 @@
 
       <!-- Blog Categories Well -->
       <div class="well">
-        <h4>References</h4>
-        <ul class="list-unstyled">
-          <li style='<%= "display: none;" unless @profile.url.present? %>'>
-            Website: 
-            <a href="<%= @profile.url %>">
-              <%= @profile.url %>              
-            </a>
-          </li>
-          <li style="<%= "display: none;" unless @profile.facebook.present? %>">
-            facebook: 
-            <a href="https://www.facebook.com/<%= @profile.facebook %>" target="blank" >
-              <%= @profile.facebook %>
-            </a>
-          </li>
-          <li style="<%= "display: none;" unless @profile.twitter.present? %>">
-            twitter: 
-            <a href="https://www.twitter.com/<%= @profile.twitter %>" target="blank" >
-              <%= "@#{@profile.twitter}" %>              
-            </a>
-          </li>  
-          <li style="<%= "display: none;" unless @profile.instagram.present? %>">
-            instagram: 
-            <a href="https://www.instagram.com/<%= @profile.instagram %>" target="blank" >
-              <%= @profile.instagram %>                
-            </a>
-          </li>
-          <li style="<%= "display: none;" unless @profile.location.present? %>">
-            Location: <%= @profile.location %>
-          </li>
+        <h4>Social Links</h4>
+        <ul class="socials">
+            <li style="<%= "display: none;" unless @profile.facebook.present? %>">
+                <a href="https://www.facebook.com/<%= @profile.facebook %>">
+                  <i class="fa fa-facebook"></i>
+                </a>
+            </li>
+            <li style="<%= "display: none;" unless @profile.twitter.present? %>">
+                <a href="https://www.twitter.com/<%= @profile.twitter %>">
+                  <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li style="<%= "display: none;" unless @profile.url.present? %>">
+                <a href="<%= @profile.url %>"> <i class="fa fa-link"></i> </a>
+            </li>
+            <li style="<%= "display: none;" unless @profile.instagram.present? %>">
+                <a href="https://www.instagram.com/<%= @profile.instagram %>">
+                  <i class="fa fa-instagram"></i>
+                </a>
+            </li>
+            <li style="<%= "display: none;" unless @profile.location.present? %>">
+                <a href="#" data-toggle="tooltip", data-placement="bottom" title="<%= @profile.location %>">
+                  <i class="fa fa-location-arrow"></i>
+                </a>
+            </li>
         </ul>
       </div>
 
@@ -114,7 +115,9 @@
             <div class="col-lg-6">
             <ul class="list-unstyled">
               <% ActsAsTaggableOn::Tag.first(5).each do |tagging| %>
-                <li><%= link_to tagging, tag_path(tagging.name) %></li>
+                <li>
+                  <%= link_to tagging, tag_path(tagging.name) %>
+                </li>
               <% end %>
             </ul>
           </div>

@@ -25,6 +25,9 @@
 $(document).on('turbolinks:load', function() {
   $(".se-pre-con").fadeOut("slow");
   $("header.lazyload").lazyload();
+  
+  // Activate tooltip
+  $('[data-toggle="tooltip"]').tooltip();
 
   //let timeout = setTimeout(function() {
   //  lazyload();
