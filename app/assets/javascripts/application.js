@@ -133,5 +133,13 @@ $(document).on('turbolinks:load', function() {
   $('#name').value = '';
   $('#email').value = '';
   $('#message').value = '';
+
+  $('#go-top a').on('click', function (event) {
+    event.preventDefault();
+
+    $('html,body').animate({
+        scrollTop: $('#main-content').offset().top -10
+    }, 1000);
+  });
   
 });

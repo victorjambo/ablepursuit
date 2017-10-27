@@ -717,6 +717,7 @@ header.about-header > .container {
 #navbar-logo {
   font-family: 'sifonnbasic_outline';
   font-size: 50px;
+  font-weight: bold;
 }
 
 #navbar-logo span {
@@ -846,34 +847,34 @@ header.about-header > .container {
 }
 
 .post_grid .post-header {
-    padding: 45px 43px
+  padding: 45px 43px
 }
 
 .sticky.post .post-header {
-    border: none
+  border: none
 }
 
 .post-header h2 a, .post-header h1 {
-    font-size: 24px;
-    color: #222;
-    margin-bottom: 2px;
-    position: relative;
-    display: inline-block;
-    line-height: 1.4em;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 2px;
+  position: relative;
+  display: inline-block;
+  line-height: 1.4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word
 }
 
 .post-header h2 a:hover {
-    opacity: 0.8
+  opacity: 0.8
 }
 
 .side_right .post-header h2 a, .side_right .post-header h2 {
-    margin-bottom: 5px;
-    display: block
+  margin-bottom: 5px;
+  display: block
 }
 
 .content_post_wrap {
@@ -882,7 +883,7 @@ header.about-header > .container {
   width: 91.8918918%;
   box-sizing: border-box;
   position: relative;
-  z-index: 99;
+  /* z-index: 99; */
   margin: 0 auto;
   box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.05);
