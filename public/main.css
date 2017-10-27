@@ -705,5 +705,67 @@ header.about-header > .container {
 /***h2 above pins***/
 #my-container h2 {
   text-align: center;
-  padding-bottom: 50px
+  padding-bottom: 50px;
+  line-height: 35px;
+}
+
+
+/**here*/
+@font-face {
+  font-family: 'sifonnbasic_outline';
+  src: url('/fonts/sifonn_basic_outline-webfont.woff2') format('woff2'),
+       url('/fonts/sifonn_basic_outline-webfont.woff') format('woff'),
+       url('/fonts/sifonn_basic_outline-webfont.otf') format('opentype'),
+       url('/fonts/sifonn_basic_outline-webfont.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#navbar-logo {
+  font-family: 'sifonnbasic_outline';
+  font-size: 50px;
+}
+
+#navbar-logo span {
+  color: #2fb9ff;
+}
+
+@media only screen and (max-width: 765px) {
+  
+  .navbar-custom div {
+    margin: 0px 0px;
+  }
+  .intro-header .site-heading,
+  .intro-header .post-heading,
+  .intro-header .page-heading {
+    padding: 200px 0 50px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  #my-container h2 {
+    font-size: large;
+  }
+  #navbar-logo {
+    font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #navbar-logo {
+    font-size: 37px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #my-container h2 {
+    font-size: unset;
+  }
+  #navbar-logo {
+    font-size: 25px;
+  }
+  .intro-header .site-heading,
+  .intro-header .post-heading,
+  .intro-header .page-heading {
+    padding: 200px 0 50px;
+  }
 }
