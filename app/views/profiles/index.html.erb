@@ -1,3 +1,9 @@
+<style>
+  body {
+    background-color: #f1f1f1;
+  }
+</style>
+
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below.background: url('https://media.glassdoor.com/home/hero.jpg'); -->
 <header class="intro-header lazyload" style="background-image: url('/images/placeholder/intro.jpg" data-src="/images/intro-min.jpg">
@@ -26,14 +32,16 @@
 
 <!-- container -->
 <div class="container" id="my-container">
-  <h2>
-    Custolive is a <i>business to customer</i> solution that features products of 
-    businesses &amp; creates conversations about them on social media.
-  </h2>  
+  <div class="h2-container shadow">
+    <h2 class="white">
+      Custolive is a 'business to customer' solution that features products of 
+      businesses &amp; creates conversations about them on social media.
+    </h2>
+  </div>  
   <div class="row">
     <% @profiles.each do |profile| %>
-      <div class="col-md-4">
-        <div class="my-box">
+      <div class="col-lg-4 col-md-4 col-sm-6">
+        <div class="my-box bg-white">
           <%= link_to profile do %>
             <%= image_tag profile.avatar.url, class: "img-responsive shadow" %>
           <% end %>
@@ -54,19 +62,19 @@
 <section id="horizantal-icons">
   <div class="container">
     <div class="row text-center">
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-        <div class="horizantal-icons-container">
-          <img class="img-responsive hz-icons" src="/images/horizantal-icons/customer-xp.png"/><br/>
-          <h2>Customer Experience</h2>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
         <div class="horizantal-icons-container">
           <img class="img-responsive hz-icons" src="/images/horizantal-icons/data-visualization.png"/><br/>
           <h2>Data Visualization</h2>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="horizantal-icons-container customer-experience">
+          <img class="img-responsive hz-icons" src="/images/horizantal-icons/customer-xp.png"/><br/>
+          <h2>Customer Experience</h2>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
         <div class="horizantal-icons-container">
           <img class="img-responsive hz-icons" src="/images/horizantal-icons/product-feature.png"/><br/>
           <h2>Product Feature</h2>

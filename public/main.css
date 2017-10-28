@@ -10,7 +10,7 @@
   color: rgba(37, 51, 70, .9);
   border:1px solid rgba(37, 51, 70, .9);
 }
-  img:hover {
+img:hover {
     opacity: 0.8;
 }
 
@@ -21,6 +21,14 @@ html, body {
 
 ul {
   list-style: none;
+}
+
+/*** global white background ***/
+.bg-white {
+  background-color: white;
+}
+.white {
+  color: white;
 }
 
 /* Search button */
@@ -51,9 +59,6 @@ input.form-control {
 }
 .container {
   color: rgba(37, 51, 70, .9);
-}
-.container > h2 {
-  padding: 20px 0;
 }
 
 .container > .row {
@@ -350,9 +355,7 @@ a.btn.btn-default > span {
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-
 	padding: 55px 50px;
-	margin-top: 80px;
 }
 
 .footer-distributed .footer-left,
@@ -678,11 +681,22 @@ header.about-header > .container {
 
 /***horizantal icons***/
 #horizantal-icons {
-  background-color: rgba(240, 248, 255, 0.29);
+  background-color: #2fb9ff45;
+  padding: 80px 0;
 }
 
 .horizantal-icons-container {
-  margin: 50px;
+  background: #2fb9ff9c none repeat scroll 0 0;
+  border-radius: 4px;
+  box-shadow: 0 7px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.customer-experience {
+  background: #fff none repeat scroll 0 0!important;
+  color: #2fb9ff!important;
 }
 
 .hz-icons{
@@ -694,13 +708,6 @@ header.about-header > .container {
   padding-bottom: 0px;
 }
 
-
-/***h2 above pins***/
-#my-container h2 {
-  text-align: center;
-  padding-bottom: 50px;
-  line-height: 35px;
-}
 
 
 /*** logo-font ***/
@@ -736,7 +743,7 @@ header.about-header > .container {
   }
 }
 @media only screen and (max-width: 425px) {
-  #my-container h2 {
+  .h2-container h2 {
     font-size: large;
   }
   #navbar-logo {
@@ -751,7 +758,7 @@ header.about-header > .container {
 }
 
 @media only screen and (max-width: 320px) {
-  #my-container h2 {
+  .h2-container h2 {
     font-size: unset;
   }
   #navbar-logo {
@@ -938,13 +945,13 @@ header.about-header > .container {
   display: inline-block;
   text-decoration: none;
   font-family: 'Exo',sans-serif;
-  background-color: #f1f1f1;
+  background-color: #d6d3d3;
   font-weight: 700;
 }
 
 .tags_wrap a:hover {
   color: #000000;
-  background-color: #bd8a49;
+  background-color: #2fb9ff;
 }
 
 .tags {
@@ -954,54 +961,54 @@ header.about-header > .container {
 
 /***line***/
 .decorater {
-    text-align: center;
-    margin-bottom: 0;
-    margin: 0 auto 0
+  text-align: center;
+  margin-bottom: 0;
+  margin: 0 auto 0
 }
 
 .line {
-    display: inline-block;
-    position: relative
+  display: inline-block;
+  position: relative
 }
 
 .line:before {
-    right: 9px
+  right: 9px
 }
 
 .line:before,.line:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    border-bottom: 1px solid;
-    border-bottom-color: #bd8a49;
-    width: 40px;
-    margin: 0 6px
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-bottom: 1px solid;
+  border-bottom-color: #2fb9ff;
+  width: 40px;
+  margin: 0 6px
 }
 
 .dot {
-    width: 5px;
-    height: 5px;
-    display: inline-block;
-    background-color: #bd8a49;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-    position: relative
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  background-color: #2fb9ff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  position: relative
 }
 
 /** edit profile as admin **/
 .content_metabottom_wrap {
-    width: 91.8918918%;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 99;
-    margin: 0 auto;
-    margin-top: 69px
+  width: 91.8918918%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 99;
+  margin: 0 auto;
+  margin-top: 69px
 }
 
 .full_post .content_post_wrap+.content_metabottom_wrap {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .full_post .post-header+.content_metabottom_wrap {
@@ -1052,7 +1059,7 @@ header.about-header > .container {
 }
 
 .post-share a:hover {
-  color: #bd8a49
+  color: #2fb9ff
 }
 
 .meta_bottom {
@@ -1060,3 +1067,31 @@ header.about-header > .container {
   font-size: 0;
   overflow: hidden;
 }
+
+
+/*** box below search ****/
+.h2-container {
+  position: relative;
+  border-style: solid;
+  border-width: 5px;
+  top: -70px;
+  padding: 20px;
+  background-color: #00000080;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-color: white;
+}
+
+.h2-container h2 {
+  margin-top: 10px;
+}
+
+/**** edit page inputs ****/
+input.form-control, .form-control {
+  border-width: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #337ab752;
+}
+
+

@@ -1,8 +1,25 @@
 <div class="container" style="padding-top: 70px;">
-	<h1>Editing Profile</h1>
-
-	<%= render 'form', profile: @profile %>
-
-	<%= link_to 'Show', @profile %> |
-	<%= link_to 'Back', profiles_path %>
+	<div class="row">
+		<div class="col-md-3"style="padding-top: 26px;">
+				<ul class="list-group">
+					<li class="list-group-item active">Editing Profile</li>
+					<li class="list-group-item"><%= link_to 'View Profile', @profile %></li>
+				</ul>
+		</div>
+		<div class="col-md-5 col-md-offsets-1">
+			<h2>Edit Profile</h2>
+			<%= render 'form', profile: @profile %>
+		</div>
+		<div class="col-md-4">
+			<h2><%= @profile.title.capitalize %>'s Picture</h2>
+			<%= image_tag @profile.avatar.url, style: "width:250px;height:250px" %>
+			<%= simple_form_for @profile do |f| %>
+				<div class="form-group">
+					<%= f.input :avatar, as: :file %>
+					<%= button_tag type: 'submit', id: "update-profile", class: "btn btn-primary"  do %>
+            <i class="fa fa-btn fa-user"></i> Update Photo
+          <% end %>
+				</div>
+			<% end %>
+		</div>
 </div>

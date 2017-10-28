@@ -15,7 +15,7 @@
           </div>
         </div>
         <div class="post-img">
-          <%= image_tag @profile.avatar.url, class: "attachment-swanky-full-thumb size-swanky-full-thumb wp-post-image", alt: "profile image", width: "1080", height: "720" %>
+          <%= image_tag @profile.avatar.url, class: "attachment-swanky-full-thumb size-swanky-full-thumb wp-post-image shadow", alt: "profile image", width: "1080", height: "720" %>
           </div>
         <div class="content_post_wrap">
           <div class="post-entry">
@@ -24,12 +24,12 @@
             <p><%= @profile.content %></p>
             
             <div class="post-tags">
-              <h5 class="tags">Tags :</h5>
-              <span class="tags_wrap">
-                <% @profile.tag_list.map do |t| %>
+              <h5 class="tags">Tags :</h5>              
+              <% @profile.tag_list.map do |t| %>
+                <span class="tags_wrap">
                   <%= link_to t, tag_path(t) %>
-                <% end %>
-              </span>
+                  </span>
+              <% end %>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@
       
       <!-- Blog Search Well -->
       <div class="well" id="show-search">
-        <h4>Search</h4>
+        <h5 class="tags">Search</h5>
         <%= form_tag profiles_path, :method => 'get', class: 'form-inline' do %>
           <div class="input-group">
             <%= search_field_tag :search, params[:search], type: "text", class: "form-control", size: "100%", placeholder: "Company name" %>
@@ -70,7 +70,7 @@
 
       <!-- Blog Categories Well -->
       <div class="well">
-        <h4>Social Links</h4>
+        <h5 class="tags">Social Links</h5>
         <ul class="socials">
             <li style="<%= "display: none;" unless @profile.facebook.present? %>">
                 <a href="https://www.facebook.com/<%= @profile.facebook %>">
@@ -100,7 +100,7 @@
 
       <% unless @similar_profiles.empty? %>
         <div class="well">
-          <h4>Similar organizations</h4>
+          <h5 class="tags">Similar organizations</h5>
           <div class="similar-profiles">
             <% @similar_profiles.map do |similar_profile| %>
               <%= link_to similar_profile.title, similar_profile %>,
@@ -110,17 +110,13 @@
       <% end %>
       
       <div class="well">
-        <h4>Browse by category</h4>
-          <div class="row">
-            <div class="col-lg-6">
-            <ul class="list-unstyled">
-              <% ActsAsTaggableOn::Tag.first(5).each do |tagging| %>
-                <li>
-                  <%= link_to tagging, tag_path(tagging.name) %>
-                </li>
-              <% end %>
-            </ul>
-          </div>
+        <div class="post-tags" style="margin-top: 0px;">
+          <h5 class="tags">Browse by category</h5>          
+          <% ActsAsTaggableOn::Tag.first(5).each do |tagging| %>
+            <span class="tags_wrap">
+              <%= link_to tagging, tag_path(tagging.name) %>
+            </span>
+          <% end %>          
         </div>
       </div>
       

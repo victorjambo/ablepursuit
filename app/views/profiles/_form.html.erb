@@ -11,20 +11,15 @@
     </div>
   <% end %>
 
-  <%= image_tag profile.avatar.url if profile.avatar.present? %>
-
-
-  <%= f.input :avatar, as: :file, wrapper: :vertical_file_input %>
-
   <%= f.input :title, placeholder: 'Business name' %>
 
   <%= f.input :tagline, placeholder: 'Tagline' %>
 
-  <%= f.input :tag_list, collection: ActsAsTaggableOn::Tag.all.map(&:name) %>  
+  <%= f.input :tag_list, collection: ActsAsTaggableOn::Tag.all.map(&:name), label: 'Category' %>  
 
-  <%= f.input :content, label: 'Business description' %>
+  <%= f.input :content, label: 'Business description', input_html: { cols: "50", rows: "10" } %>
 
-  <h3>references</h3><br>
+  <h3>Social links</h3><br>
   
   <%= f.input :url, label: 'Website', placeholder: 'Website' %>
 
@@ -36,7 +31,12 @@
 
   <%= f.input :location, label: 'location', placeholder: 'location' %>
 
-  <%= f.button :submit %>
+  <button name="button" type="submit" class="btn btn-danger" style="margin-right: 5px">
+    <i class="fa fa-btn fa-cancel"></i> Cancel
+  </button>
+  <%= button_tag type: 'submit', class: "btn btn-primary"  do %>
+    <i class="fa fa-btn fa-user"></i> Update Profile
+  <% end %>
 
 <% end %>
 
