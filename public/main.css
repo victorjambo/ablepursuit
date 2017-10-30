@@ -684,12 +684,12 @@ header.about-header > .container {
 
 /***horizantal icons***/
 #horizantal-icons {
-  background-color: #2fb9ff45;
+  background-color: rgba(47, 185, 255, 0.45);
   padding: 80px 0;
 }
 
 .horizantal-icons-container {
-  background: #2fb9ff9c none repeat scroll 0 0;
+  background: rgba(47, 185, 255, 0.90) none repeat scroll 0 0;
   border-radius: 4px;
   box-shadow: 0 7px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0);
   color: #fff;
@@ -1079,7 +1079,7 @@ header.about-header > .container {
   border-width: 5px;
   top: -70px;
   padding: 20px;
-  background-color: #00000080;
+  background-color: rgba(0, 0, 0, 0.80);
   box-sizing: border-box;
   border-radius: 5px;
   border-color: white;
@@ -1094,7 +1094,7 @@ input.form-control, .form-control {
   border-width: 2px;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-color: #337ab752;
+  border-color: rgba(51, 122, 183, 0.52);
 }
 
 
