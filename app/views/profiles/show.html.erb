@@ -112,7 +112,7 @@
       <div class="well">
         <div class="post-tags" style="margin-top: 0px;">
           <h5 class="tags">Browse by category</h5>          
-          <% ActsAsTaggableOn::Tag.first(5).each do |tagging| %>
+          <% ActsAsTaggableOn::Tag.most_used(5).each do |tagging| %>
             <span class="tags_wrap">
               <%= link_to tagging, tag_path(tagging.name) %>
             </span>
