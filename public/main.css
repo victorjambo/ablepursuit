@@ -359,6 +359,7 @@ a.btn.btn-default > span {
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 55px 50px;
+  margin-top: 0;
 }
 
 .footer-distributed .footer-left,
