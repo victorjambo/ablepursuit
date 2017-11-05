@@ -69,6 +69,9 @@ $(document).on('turbolinks:load', function() {
     $(".navbar-custom .nav li a, .navbar-custom .navbar-brand").css({
       color: "#000"
     });
+    $(".navbar-custom").css({
+      "border-bottom": "1px solid rgba(0, 0, 0, 0.13)"
+    });
   }
 
   // back to top link

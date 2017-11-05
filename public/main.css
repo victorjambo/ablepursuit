@@ -1,7 +1,7 @@
 
 * {
-    font-family: Roboto;
-  }
+  font-family: Roboto;
+}
 
 .not-used{
   font-size: 20px;
@@ -11,7 +11,7 @@
   border:1px solid rgba(37, 51, 70, .9);
 }
 img:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 html, body {
@@ -31,7 +31,7 @@ ul {
   color: white;
 }
 .txt-shadow {
-  text-shadow: 1.5px 1.5px rgba(37, 51, 70, .9);
+  text-shadow: 0 0 4px #000000;
 }
 
 /* Search button */
@@ -684,27 +684,14 @@ header.about-header > .container {
 
 /***horizantal icons***/
 #horizantal-icons {
-  background-color: rgba(47, 185, 255, 0.45);
+  background-color: #838578;
   padding: 80px 0;
-}
-
-.horizantal-icons-container {
-  background: rgba(47, 185, 255, 0.90) none repeat scroll 0 0;
-  border-radius: 4px;
-  box-shadow: 0 7px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0);
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
-
-.customer-experience {
-  background: #fff none repeat scroll 0 0!important;
-  color: #2fb9ff!important;
 }
 
 .hz-icons{
   display: inline!important;
-  max-width: 50%!important;
+  max-width: 25%!important;
+  border-radius: 33px 0;
 }
 
 #horizantal-icons .container .row{
@@ -746,7 +733,7 @@ header.about-header > .container {
   }
 }
 @media only screen and (max-width: 425px) {
-  .h2-container h2 {
+  .h2-container h2,h3 {
     font-size: large;
   }
   #navbar-logo {
@@ -761,7 +748,7 @@ header.about-header > .container {
 }
 
 @media only screen and (max-width: 320px) {
-  .h2-container h2 {
+  .h2-container h2,h3 {
     font-size: unset;
   }
   #navbar-logo {
@@ -1071,24 +1058,6 @@ header.about-header > .container {
   overflow: hidden;
 }
 
-
-/*** box below search ****/
-.h2-container {
-  position: relative;
-  border-style: solid;
-  border-width: 5px;
-  top: -70px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.80);
-  box-sizing: border-box;
-  border-radius: 5px;
-  border-color: white;
-}
-
-.h2-container h2 {
-  margin-top: 10px;
-}
-
 /**** edit page inputs ****/
 input.form-control, .form-control {
   border-width: 2px;
@@ -1098,3 +1067,12 @@ input.form-control, .form-control {
 }
 
 
+/****business to consumer****/
+.h2-container {
+  padding: 50px 0;
+}
+
+.h2-container h3 a,a:hover {
+  color: inherit;
+  text-decoration: none;
+}

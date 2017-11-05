@@ -24,6 +24,13 @@
             <p><%= @profile.content %></p>
             
             <div class="post-tags">
+              <h5 class="tags">Indusrty :</h5>         
+                <span class="tags_wrap">
+                  <%= link_to @profile.industry, "#" %>
+                </span>              
+            </div>
+
+            <div class="post-tags">
               <h5 class="tags">Tags :</h5>              
               <% @profile.tag_list.map do |t| %>
                 <span class="tags_wrap">
