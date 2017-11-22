@@ -25,6 +25,9 @@
 $(document).on('turbolinks:load', function() {
   $(".se-pre-con").fadeOut("slow");
   $("header.lazyload").lazyload();
+  
+  // Activate tooltip
+  $('[data-toggle="tooltip"]').tooltip();
 
   //let timeout = setTimeout(function() {
   //  lazyload();
@@ -60,11 +63,14 @@ $(document).on('turbolinks:load', function() {
   }
 
   // change css on show page
-  var urlRegex = /(profiles|users)/; //regex
+  var urlRegex = /(profiles\/|users)/; //regex
   var match = window.location.pathname.match(urlRegex); //returns true or false
   if (match) { 
     $(".navbar-custom .nav li a, .navbar-custom .navbar-brand").css({
       color: "#000"
+    });
+    $(".navbar-custom").css({
+      "border-bottom": "1px solid rgba(0, 0, 0, 0.13)"
     });
   }
 
@@ -98,7 +104,7 @@ $(document).on('turbolinks:load', function() {
     $('#my-container')[0].scrollIntoView(true);
   }
 
-  // contact us
+  // contact us ***FEATURE REMOVED***
   var name = $('#name').val();
   var email = $('#name').val();
   var subject = {};
@@ -130,5 +136,13 @@ $(document).on('turbolinks:load', function() {
   $('#name').value = '';
   $('#email').value = '';
   $('#message').value = '';
+
+  $('#go-top a').on('click', function (event) {
+    event.preventDefault();
+
+    $('html,body').animate({
+        scrollTop: $('#main-content').offset().top -10
+    }, 1000);
+  });
   
 });
